@@ -6,7 +6,7 @@ import re
 from chardet.universaldetector import UniversalDetector
 
 # 検索対象のディレクトリ
-search_dir = r"C:\Git\SvnLib\SvnLib"
+search_dir = r"C:\Git\SvnLib"
 
 # 検索対象の文字列
 search_pattern = "using System.Linq;"
@@ -21,8 +21,14 @@ ext_patterns = (
 def search_files(dir_path, file_name_list):
     matched_list = []
     for file_name in file_name_list:
-        # 検索対象の拡張子に一致しない場合はスキップ
+        # ファイル名から拡張子を取得
         _, ext = os.path.splitext(file_name)
+
+        # 拡張子が取得できない場合はスキップ
+        if not ext:
+            continue
+
+        # 検索対象の拡張子に一致しない場合はスキップ
         if not ext in ext_patterns:
             continue
 
