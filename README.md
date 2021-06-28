@@ -13,7 +13,7 @@ It is a python script to grep multiple characters at once.
 
 
 ## License
-[MIT](https://github.com/i-tanaka730/bulk_grep//blob/master/LICENSE)
+[MIT](https://github.com/i-tanaka730/py-bulk-grep/blob/main/LICENSE)
 
 ## Author
 [Ikuya Tanaka](https://github.com/i-tanaka730)
